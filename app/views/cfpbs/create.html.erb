@@ -1,1 +1,41 @@
-<h1>This is a form</h1>
+<h1>CFPBS Form</h1>
+
+<h2>Your Monthly Income</h2>
+
+<h3>Pre-Tax Income</h3>
+
+<%= form_tag("/create", method: 'post') do %>
+  <%= label_tag(:q, "Your Income:") %>
+  <%= text_field_tag(:q) %>
+  <%= label_tag(:q, "Co-borrower's income:") %>
+  <%= text_field_tag(:q) %>
+  <%= label_tag(:q, "Total monthly pre-tax income:") %>
+  <%= text_field_tag(:q) %>
+
+<h3>Take-Home Income</h3>
+  <%= label_tag(:q, "Your Income:") %>
+  <%= text_field_tag(:q) %>
+  <%= label_tag(:q, "Co-borrower's income") %>
+  <%= text_field_tag(:q) %>
+  <%= label_tag(:q, "Total monthly take-home income") %>
+  <%= text_field_tag(:q) %>
+<h3>Monthly spending and savings</h3>
+  <%= label_tag(:q, "Rent:") %>
+  <%= text_field_tag(:q) %>
+  <%= label_tag(:q, "Utilities") %>
+ 
+  <%= text_field_tag(:q) %>
+  <%= label_tag(:q, "Debt payments") %>
+  <%= text_field_tag(:q) %>
+  <%= label_tag(:q, "Living & other expenses") %>
+  <%= text_field_tag(:q) %>
+  <%= label_tag(:q, "Savings") %>
+  <%= text_field_tag(:q) %>
+  <%= label_tag(:q, "Total monthly spendings and savings") %>
+  <%= text_field_tag(:q) %>
+  
+
+  <%= submit_tag("Create") %>
+<% end %>
+
+
