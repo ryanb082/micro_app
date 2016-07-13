@@ -8,42 +8,42 @@
       <h3>Pre-Tax Income</h3>
 
       <%= form_tag("/create", method: 'post') do %>
-        <%= label_tag(:q, "Your Income:") %>
-        <%= text_field_tag(:q) %>
-        <%= label_tag(:q, "Co-borrower's income:") %>
-        <%= text_field_tag(:q) %>
-        <%= label_tag(:q, "Total monthly pre-tax income:") %>
-        <%= text_field_tag(:q) %>
+        <%= label_tag(:pretax_income, "Your Income:") %>
+        <%= text_field_tag(:incom) %>
+        <%= label_tag(:pretax_coborrow_income, "Co-borrower's income:") %>
+        <%= text_field_tag(:coborrow_income) %>
+        <%= label_tag(:pretax_income_total, "Total monthly pre-tax income:") %>
+        <%= text_field_tag(:pretax_income_total) %>
     </div>
   </div>
 
   <div class='form-horizontal'>
    <div class='form-group'> 
       <h3>Take-Home Income</h3>
-        <%= label_tag(:q, "Your Income:") %>
-        <%= text_field_tag(:q) %>
-        <%= label_tag(:q, "Co-borrower's income") %>
-        <%= text_field_tag(:q) %>
-        <%= label_tag(:q, "Total monthly take-home income") %>
-        <%= text_field_tag(:q) %>
+        <%= label_tag(:takehome_income, "Your Income:") %>
+        <%= text_field_tag(:takehome_income) %>
+        <%= label_tag(:takehome_coborrower_income, "Co-borrower's income") %>
+        <%= text_field_tag(:takehome_coborrower_income) %>
+        <%= label_tag(:takehome_income_total, "Total monthly take-home income") %>
+        <%= text_field_tag(:takehome_income_total) %>
     </div>
   </div>
   <div class='form-horizontal'>
     <div class='form-group'>
       <h3>Monthly spending and savings</h3>
-          <%= label_tag(:q, "Rent:") %>
-          <%= text_field_tag(:q) %>
-          <%= label_tag(:q, "Utilities") %>
+          <%= label_tag(:rent, "Rent:") %>
+          <%= text_field_tag(:rent) %>
+          <%= label_tag(:utilities, "Utilities") %>
          
-          <%= text_field_tag(:q) %>
-          <%= label_tag(:q, "Debt payments") %>
-          <%= text_field_tag(:q) %>
-          <%= label_tag(:q, "Living & other expenses") %>
-          <%= text_field_tag(:q) %>
-          <%= label_tag(:q, "Savings") %>
-          <%= text_field_tag(:q) %>
-          <%= label_tag(:q, "Total monthly spendings and savings") %>
-          <%= text_field_tag(:q) %>
+          <%= text_field_tag(:utilities) %>
+          <%= label_tag(:debt_payments, "Debt payments") %>
+          <%= text_field_tag(:debt_payments) %>
+          <%= label_tag(:other_expenses, "Living & other expenses") %>
+          <%= text_field_tag(:other_expenses) %>
+          <%= label_tag(:savings, "Savings") %>
+          <%= text_field_tag(:savings) %>
+          <%= label_tag(:total_spendings, "Total monthly spendings and savings") %>
+          <%= text_field_tag(:total_spendings) %>
           
 
         <%= submit_tag ("Create") %>
