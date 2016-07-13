@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   root 'cfpbs#create'
+  post 'create' => 'pdf#create'
 
 
 
