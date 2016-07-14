@@ -27,6 +27,8 @@ class PdfController < ApplicationController
 		source_form = "#{Rails.root}/public/assets/monthly_payment_worksheet_form.pdf"
 		tmp_form = Tempfile.new('cfpb_form')
 
+		# Make sure the binary below is the proper binary on the system serving this file
+		# Can be determined at command line with `which pdftk`
 		pdftk = PdfForms.new('/usr/bin/pdftk')
 
 		pdftk.fill_form source_form, tmp_form.path, form_vals, :flatten => true
