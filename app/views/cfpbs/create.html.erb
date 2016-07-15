@@ -1,57 +1,84 @@
-<h1>CFPBS Form</h1>
+<h1 class='text-center'>CFPBS Form</h1>
 
-<h2>Your Monthly Income</h2>
+<h2 class='text-center'>Your Monthly Income</h2>
 
 <div class='container'>
-  <div class='form-horizontal'>
+  <div class='col-md-1'></div>
+  <div class='col-md-4'>
     <div class='form-group'>
       <h3>Pre-Tax Income</h3>
 
       <%= form_tag("/create", method: 'post') do %>
-        <%= label_tag(:pretax_income, "Your Income:") %>
-        <%= text_field_tag(:incom) %>
-        <%= label_tag(:pretax_coborrow_income, "Co-borrower's income:") %>
-        <%= text_field_tag(:coborrow_income) %>
-        <%= label_tag(:pretax_income_total, "Total monthly pre-tax income:") %>
-        <%= text_field_tag(:pretax_income_total) %>
+        <div class='form-group row'>
+          <%= label_tag(:pretax_income, "Your Income:") %>
+          <%= text_field_tag(:pretax_income, '', class: 'form-control') %>
+        </div>
+        <div class='form-group row'>
+          <%= label_tag(:pretax_coborrow_income, "Co-borrower's income:") %>
+          <%= text_field_tag(:pretax_coborrow_income, '', class: 'form-control') %>
+        </div>
+        <div class='form-group row'>
+          <%= label_tag(:pretax_income_total, "Total monthly pre-tax income:") %>
+          <%= text_field_tag(:pretax_income_total, '', class: 'form-control') %>
+        </div>
     </div>
-  </div>
 
-  <div class='form-horizontal'>
    <div class='form-group'> 
       <h3>Take-Home Income</h3>
-        <%= label_tag(:takehome_income, "Your Income:") %>
-        <%= text_field_tag(:takehome_income) %>
-        <%= label_tag(:takehome_coborrower_income, "Co-borrower's income") %>
-        <%= text_field_tag(:takehome_coborrower_income) %>
-        <%= label_tag(:takehome_income_total, "Total monthly take-home income") %>
-        <%= text_field_tag(:takehome_income_total) %>
+        <div class='form-group row'>
+          <%= label_tag(:takehome_income, "Your Income:") %>
+          <%= text_field_tag(:takehome_income, '', class: 'form-control') %>
+        </div>
+        <div class='form-group row'>
+          <%= label_tag(:takehome_coborrower_income, "Co-borrower's income") %>
+          <%= text_field_tag(:takehome_coborrower_income, '', class: 'form-control') %>
+        </div>
+        <div class='form-group row'>
+          <%= label_tag(:takehome_income_total, "Total monthly take-home income") %>
+          <%= text_field_tag(:takehome_income_total, '', class: 'form-control') %>
+        </div>
     </div>
   </div>
-  <div class='form-horizontal'>
+        <div class='col-md-2'></div>  
+  <div class='col-md-4'>
     <div class='form-group'>
       <h3>Monthly spending and savings</h3>
-          <%= label_tag(:rent, "Rent:") %>
-          <%= text_field_tag(:rent) %>
-          <%= label_tag(:utilities, "Utilities") %>
-         
-          <%= text_field_tag(:utilities) %>
-          <%= label_tag(:debt_payments, "Debt payments") %>
-          <%= text_field_tag(:debt_payments) %>
-          <%= label_tag(:other_expenses, "Living & other expenses") %>
-          <%= text_field_tag(:other_expenses) %>
-          <%= label_tag(:savings, "Savings") %>
-          <%= text_field_tag(:savings) %>
-          <%= label_tag(:total_spendings, "Total monthly spendings and savings") %>
-          <%= text_field_tag(:total_spendings) %>
-          
-
-        <%= submit_tag ("Create") %>
-
-      <% end %>
+          <div class='form-group row'>
+            <%= label_tag(:rent, "Rent:") %>
+            <%= text_field_tag(:rent, '', class: 'form-control') %>
+          </div>
+          <div class='form-group row'>
+            <%= label_tag(:utilities, "Utilities") %>
+            <%= text_field_tag(:utilities, '', class: 'form-control') %>
+          </div>
+          <div class='form-group row'>
+            <%= label_tag(:debt_payments, "Debt payments") %>
+            <%= text_field_tag(:debt_payments, '', class: 'form-control') %>
+          </div>
+          <div class='form-group row'>
+            <%= label_tag(:other_expenses, "Living & other expenses") %>
+            <%= text_field_tag(:other_expenses, '', class: 'form-control') %>
+          </div>
+          <div class='form-group row'>
+            <%= label_tag(:savings, "Savings") %>
+            <%= text_field_tag(:savings, '', class: 'form-control') %>
+          </div>
+          <div class='form-group row'>
+            <%= label_tag(:total_spendings, "Total monthly spendings and savings") %>
+            <%= text_field_tag(:total_spendings, '', class: 'form-control') %>
+          </div>
+        </div>
+        </div>       
+      <div class='col-md-1'></div>   
+    <div class='col-md-12'>
+          <div class = "row text-center">
+            <br />
+            <%= submit_tag("Submit", class: 'btn btn-primary btn-lg') %>
+          </div>
     </div>
-  </div>
-          
-</div>
+      <% end %>
+
+  </div>    
+ </div>
 
 
