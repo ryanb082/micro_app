@@ -20,9 +20,15 @@ class PdfController < ApplicationController
 
 		form_vals = Hash.new(0)
 
+
 		field_mapping.each do |key, field|
 			form_vals[field] = params[key];
 		end
+
+
+		form_vals["LineC"] = params["pretax_income"].to_i + params["pretax_coborrow_income"].to_i
+		form_vals["LineF"] = params["takehome_income"].to_i + params["takehome_coborrower_income"].to_i
+		form_vals["LineL"] = params["rent"].to_i + params["utilities"].to_i + params["debt_payments"].to_i +  params["other_expenses"].to_i +  params["savings"].to_i
 
 		source_form = "#{Rails.root}/public/assets/monthly_payment_worksheet_form.pdf"
 		tmp_form = Tempfile.new('cfpb_form')
